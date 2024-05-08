@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500|Ramabhadra&display=swap" rel="stylesheet"> 
+    <link rel= 'stylesheet' href="{% static 'css/style_base.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/favicon.png' %}">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <title>Horizon</title>    
+    {% block styling %}{% endblock %}
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            
+        </div>
+        <nav>
+          <label class="logo"> Horizon. </label>
+            <ul>
+                <li><a  href="./">Home</a></li>
+                <li><a  href="catalogue.html">Blog</a></li>
+                <li><a  href="contact.html">Projects</a></li>
+                <li><a  href="app.html">About</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+   
+    {% block content%}
+    {% endblock %} 
+    <section class='liquid'>
+
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+        <div class="wave wave4"></div>
+    </section>
+    <footer>
+        <div class="mango">
+        <div class="abt"> 
+            <h1>Horizon</h1>
+            <h2>दिल ना-उमीद तो नहीं नाकाम ही तो है,<br> 
+              लम्बी है ग़म की शाम मगर शाम ही तो है||</h2>
+            <br>
+            <table padding=40>
+              <tr>
+                <td><img src="{% static 'assets/phone.png' %}" alt='phone'></td>
+                <td>1800-180-180</td>
+              </tr>
+
+              <tr>
+                <td><img src="{% static 'assets/mail.png' %}" alt='Mail'></td>
+                <td>john_smith@email.com</td>
+              </tr>
+    
+              <tr>
+                <td><img src="{% static 'assets/clock.png' %}" alt='Time'></td>
+                <td>8:00 A.M - 6:00 P.M</td>
+              </tr>
+            </table>
+
+        </div>
+        <div class="Services">
+            <h3>Services</h3> 
+            <br><br>
+          <ul class='ba'>
+            <li>Customer Service</li>
+            <li>Merchant Service</li>
+            <li>Consultancy Service</li>
+            <li>Technical Support</li>
+            <li>Shipping</li>
+            <li>Returns</li>
+            <li>Free Design Services</li> 
+          </ul>
+    
+        </div>
+        <div class="Careers"> 
+            <h3>Careers</h3><br><br>
+          <ul class="ba">
+            <li>Internships</li>
+            <li>Sales and Manufacturing</li>
+            <li>Information Technology</li>
+            <li>Legal team</li>
+            <li>Marketing</li>
+            <li>Engineering</li>
+            <li>Customer Experience</li>
+            <li>Logistics</li>
+    
+          </ul>
+    
+        </div>
+        </div>
+        <br><br><br><br>
+      </footer>
+      <div class="ends">Made in India by Kaushal&#128519; <a href="./">Refresh</a></div>
+</body>
+</html>

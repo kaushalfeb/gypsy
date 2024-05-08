@@ -1,0 +1,73 @@
+{% extends 'Horizon/base.html' %}
+{% load static %}
+{% block styling %}
+        <link rel="stylesheet" href="{% static 'css/style_home.css' %}">
+{% endblock %}
+{% block content %}
+<!--    
+        <h2>List of posts</h2>
+        {% for post in posts %}
+            <h3>{{ post.title }}</h3>
+            <img src="{% static 'backs/' %}{{ post.bg_name }}" alt="{{post.genre}}" width="200"> 
+            <br>
+        {% endfor %}
+        <hr border-width=5px>
+        Projects list:<br>
+        {% for project in projects %}
+            <h3>{{ project.title }}</h3>
+            <img src="{% static 'projects/' %}{{ project.bg_name }}" alt="{{post.genre}}" width="300"> 
+        {% endfor %}
+-->
+
+<!--
+        {% for row in first_three_rows  %}
+                {{ row.title }}<br>
+        {% endfor %}
+-->
+<!--
+<h1>My Projects</h1>   <br>     
+<div class="proj">
+        {% for row in projects %}
+        <div class="card">
+                <img src="{% static '/projects/'%}{{row.bg_name}}" alt="{{row.bg_name}}" width="200px">
+                <div class="container">
+                        <div class="prohead">
+                                <h2>{{row.title}}</h2>
+                                <a href="https://github.com/"><img src="{% static 'assets/github_logo.png' %}" alt="github_logo"></a>
+                        </div>
+                        <p>{{row.about}}</p><br>
+                        <label for="file">Development Stage:</label><br>
+                        <progress id="file" value="32" max="100"> 32% </progress>
+                        
+                        <h4>Type: {{ row.type_proj}}</h4>
+                        <h4>Technology: {{ row.tech_used}}</h4>
+                        
+                        {% if row.live == True %}
+                                Status: Live &#128994;
+                                {% else %}
+                                Status: Offline &#128308;
+                        {% endif %}
+                        
+                </div>
+        </div><br>
+        {% endfor %}
+</div>
+-->
+<div class="testimonials">
+        <div class="heading">What our clients say about us</div>
+        <div class="subhead">Based upon feedback from our clients,<br>we regularly update our stratigies</div>
+        <div class="tests">
+        {% for row in testimonials %}
+        <div class="holder">
+                <img src="{% static 'users/'%}{{row.dp}}">
+                <div class="carrier">
+                        <h2>{{ row.username }}</h2>
+                        <h3> {{row.designation}} </h3>
+                        <h3> <a href="mailto:{{row.email}}"> {{row.email}} </a></h3>
+                        <p> {{row.comment}} </p>
+                </div>
+        </div> 
+        {% endfor %}
+        </div>
+</div>
+{% endblock %}

@@ -1,0 +1,159 @@
+{% extends 'Horizon/base.html' %}
+{% load static %}
+{% block styling%}
+    <link rel="stylesheet" href='{% static "css/homer_style.css"%}'>
+{% endblock %}
+
+{% block content %}
+
+    <div class="presentation">
+        <div class="lefthead">
+                <img id='hero' src="{% static 'assets/hero.png'%}" alt="hero image">
+                <img id='dotx' src="{% static 'assets/dotx.png'%}" alt="dot-pattern">
+            </div>
+        <div class="righthead">
+            <div class="greet">Hi, I am Kaushal Singh</div>
+            <div class="title">Coder/Designer</div>
+            <div class="describe"> I design user interfaces as a hobby. I have designed landing pages and<br> websites’ frontend beginning from wireframe to HTML/CSS pages.</div>
+            <table>
+                <thead>
+                    <tr>
+                    <td>Email</td>
+                    <td>Dribbble</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>kaushalmaroon@gmail.com</td>
+                        <td>kaushalfeb</td>
+                    </tr>
+                </tbody>
+            </table>
+            <form>
+                <h2>Design a website for me too!</h2>
+                <input type="text" placeholder="john@email.com">
+                <input type="submit" value="SEND" class="btn">
+            </form>
+            <img src="{% static 'assets/doty.png'%}" class='doty' alt="dots">
+            <img src="{% static 'assets/dotz.png'%}" class='dotz' alt="dots">
+            <img src="{% static 'assets/singh.png'%}" class='singh' alt="singh">
+            <img src="{% static 'assets/blue_blob.png'%}" class='blueblob' alt="blue_blob">
+
+        </div>
+    </div>
+
+    <div class="heading">
+        My Coding Experience&lt;I/O&gt;
+    </div>
+    <div class="experience">
+        
+        <div class="skills">
+            <div class="lang">
+                <a href="./experience.html"> 
+                    <div class="symbol">
+                        <img src="{% static 'assets/python_logo.png'%}">
+                    </div>
+                </a>
+                <div class="hd">
+                    <h3>Python </h3>Programming Language
+                </div>
+            </div>
+            <div class="lang">
+                <a href="./experience.html"> 
+                    <div class="symbol">
+                        <img src="{% static 'assets/mysql_logo.png'%}">
+                    </div>
+                </a>
+                <div class="hd">
+                    <h3>MySQL </h3>Database Management
+                </div>
+            </div>
+            <div class="lang">
+                <a href="./experience.html"> 
+                    <div class="symbol">
+                        <img src="{% static 'assets/DSA_logo.png'%}">
+                    </div>
+                </a>
+                <div class="hd">
+                    <h3>DSA </h3>Fundamentals
+                </div>
+            </div>
+        </div>
+        <div class="exper">
+            <div class="para">
+                My programming experience started with learning basics of Java programming language in 2014. Java helped me in understanding the basic concepts of programming and how computer compiles the code  for the machine to understand and perform operations according to the programmer. Business logic need to be backed by Database Management System like MySQL, Sql, MongoDB. I have made projects ranging from website development to standalone desktop applications. My programming journey continued with HTML, CSS, C, C++, Python, Java, MySQL, Data Structures, Linux , User Interface and User Experience.
+            </div>
+            <div class="stat">
+                <div class="pj">
+                    <h2>250+</h2>Projects Completed
+                </div>
+                <div class="cl">
+                    <h2>150+</h2>Happy Clients
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="blg">
+        <div class="heading">My Blog Articles</div>
+        {% for row in first_three_rows %}
+            <div class="blogpost">
+                <div class="cover"><img src="{%static 'backs/' %}{{row.bg_name}}" alt="{{row.bg_name}}"></div>
+                <div class="design"> <img src="{%static 'assets/green.png' %}"> </div>
+                <div class="detail"> 
+                    <h1>{{row.title}}</h1>
+                    <h2>{{row.sub_title}}</h2>
+                    <h3>{{row.genre}} | {{row.author}} |Likes {{row.likes}} | {{row.published}} </h3>
+                </div>
+            </div>
+        {% endfor %}
+    </section>
+    <br>
+    <section class="prj">
+        <div class="heading">My Latest Work</div>     
+        <div class="proj">
+                {% for row in projects %}
+                <div class="card">
+                        <img src="{% static '/projects/'%}{{row.bg_name}}" alt="{{row.bg_name}}" width="200px">
+                        <div class="container">
+                                <div class="prohead">
+                                        <h2>{{row.title}}</h2>
+                                        <a href="https://github.com/"><img src="{% static 'assets/github_logo.png' %}" alt="github_logo"></a>
+                                </div>
+                                <p>{{row.about}}</p><br>
+                                <label for="file">Development Stage:</label><br>
+                                <progress id="file" value="32" max="100"> 32% </progress>
+                                
+                                <h4>Type: {{ row.type_proj}}</h4>
+                                <h4>Technology: {{ row.tech_used}}</h4>
+                                
+                                {% if row.live == True %}
+                                        Status: Live &#128994;
+                                        {% else %}
+                                        Status: Offline &#128308;
+                                {% endif %}
+                                
+                        </div>
+                </div><br>
+                {% endfor %}
+        </div>
+    </section>
+<br>
+    <div class="testimonials">
+        <div class="heading">What our clients say about us</div>
+        <div class="subhead">Based upon feedback from our clients,<br>we regularly update our stratigies</div>
+        <div class="tests">
+        {% for row in testimonials %}
+        <div class="holder">
+                <img src="{% static 'users/'%}{{row.dp}}">
+                <div class="carrier">
+                        <h2>{{ row.username }}</h2>
+                        <h3> {{row.designation}} </h3>
+                        <h3> <a href="mailto:{{row.email}}"> {{row.email}} </a></h3>
+                        <p> {{row.comment}} </p>
+                </div>
+        </div> 
+        {% endfor %}
+        </div>
+</div><br><br><br>
+{% endblock%}
