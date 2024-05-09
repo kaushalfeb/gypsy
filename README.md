@@ -1,6 +1,8 @@
 # Gypsy
- A personal portfolio website for blogging and showcasing skills.
-![Screenshot, HomePage](/LandingPage.jpg)
+ Gypsy is the repository/project name but the website is called Horizon. 
+# Horizon
+A personal portfolio website for blogging and showcasing skills.
+![Screenshot, HomePage](/LandingPage.png)
 
 ### Technology
 
