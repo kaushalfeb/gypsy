@@ -4,7 +4,11 @@ from django.shortcuts import render
 
 def postlist(request):
 	posts = Posts.objects.all()
-	return render(request,'Horizon/postlist.html',{'posts':posts})
+	heropost = Posts.objects.all()[:1]
+	latest_posts = Posts.objects.all()[2:6]
+	editors = Posts.objects.all()[6:10]
+	return render(request,'Horizon/postlist.html',
+		{'posts':posts,'heropost':heropost,'latest_posts':latest_posts,'editors':editors})
 
 def home(request):
 	posts = Posts.objects.all()

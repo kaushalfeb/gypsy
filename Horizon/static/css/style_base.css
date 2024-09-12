@@ -20,7 +20,7 @@ label.logo{
 	font-weight: 900;
 	font-family: 'Montserrat';
 	-webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+  -webkit-background-clip: text;
 }
 nav ul{
 	float: right;
