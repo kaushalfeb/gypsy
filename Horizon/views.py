@@ -1,6 +1,6 @@
 from .models import Posts,Projects,Testimonials
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 
 def postlist(request):
 	posts = Posts.objects.all()
@@ -17,3 +17,8 @@ def home(request):
 	first_three_rows = Posts.objects.all()[:3]
 	testimonials = Testimonials.objects.all()
 	return render(request,'Horizon/homer.html',{'posts':posts,'projects':projects,'first_three_rows' : first_three_rows,'testimonials':testimonials})
+
+def reading(request,id):
+	read = get_object_or_404(Posts,pk=id)
+	return render(request,'Horizon/reading.html',
+		{'read':read})
