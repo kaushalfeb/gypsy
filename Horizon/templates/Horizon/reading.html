@@ -1,5 +1,6 @@
 {% extends 'Horizon/base.html' %}
 {% load static %}
+
 {% block styling %}
 	<link rel="stylesheet" type="text/css" href='{% static "css/read_style.css"%}'>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -7,8 +8,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
-
 {% endblock %}
+
 
 {% block content %}
 
@@ -16,19 +17,18 @@
 		<img src="{% static 'backs/' %}{{read.bg_name}}">
 	</div>
 	<div class="page">
-		<h5>{{read.genre}}</h5>
+		<h5 class="gnr">{{read.genre}}</h5>
 		<div class="title">
-			<h1>{{read.title}}</h1>
+			<h1 class="titli">{{read.title}}</h1>
 		</div>
-		<h2>{{read.sub_title}}</h2><br>
+		<h2 class="subs">{{read.sub_title}}</h2><br>
 		<hr class="miniline">
-		<h3>By {{read.author}} on {{read.published | date:'d F,Y'}}</h3>
+		<h3 class="abt">By {{read.author}} on {{read.published | date:'d F,Y'}}</h3>
 		<article>
 			{{read.article | safe}}<br>
 			<center>* * *</center>
+			<img src="{% static 'backs/CarinaNebula.jpg' %}" alt='Carina Nebula' width="300px" justify-content="center">
 		</article>
 	</div>
 	<div>
-		
-
 {% endblock %}

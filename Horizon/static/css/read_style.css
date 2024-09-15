@@ -22,7 +22,7 @@
 	margin: auto;
 	padding-top: 50px;
 }
-.page h5{
+.gnr{
 	font-family: 'Montserrat';
 	font-size: 15px;
 	font-style: normal;
@@ -39,7 +39,7 @@
 	margin: auto;
 	margin-top: 50px;
 }
-.title h1{
+.titli{
 	font-family: 'Playfair Display',serif;
 	font-style: normal;
 	font-size: 40px;
@@ -48,7 +48,7 @@
 	margin: auto;
 	text-align: center;
 }
-.page h2{
+.subs{
 	font-family: 'Playfair Display';
 	font-size: 18px;
 	font-style: italic;
@@ -63,7 +63,7 @@
 	background-color: rgb(119, 119, 119);
 	border: none;
 }
-.page h3{
+.abt{
 	text-align: center;
 	font-family: 'Montserrat';
 	font-weight: 500;
