@@ -29,3 +29,11 @@ def home(request):
 def reading(request,id):
 	read = get_object_or_404(Posts,pk=id)
 	return render(request,'Horizon/reading.html',{'read':read})
+
+def projects(request):
+	proj = Projects.objects.all()
+	return render(request,'Horizon/projects.html',
+			   {'proj':proj})
+
+def about(request):
+	return render(request,'Horizon/about.html')

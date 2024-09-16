@@ -1,0 +1,24 @@
+{% extends 'Horizon/base.html' %}
+{% load static %}
+
+{% block title%}
+    <title>Projects</title>
+{% endblock%}
+
+{% block styling %}
+    <link rel="stylesheet" type="text/css" href='{% static "css/proj_style.css"%}'>
+{% endblock %}
+
+{% block content %}
+    <h1 class="proj-head1">My Recent Design ventures</h1>
+    <div class="container">
+        {% for pro in proj %}
+        <div class="card">
+            <img src="{% static 'projects/'%}{{pro.bg_name}}" alt="{{pro.title}}">
+            <h2>{{pro.title}}</h2>
+            <h3>{{pro.about}}</h3>
+            <h3>{{pro.type_proj}}</h3>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

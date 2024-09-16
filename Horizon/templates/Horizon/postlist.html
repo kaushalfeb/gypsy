@@ -1,5 +1,10 @@
 {% extends 'Horizon/base.html' %}
 {% load static %}
+
+{% block title%}
+    <title>Blog Posts</title>
+{% endblock%}
+
 {% block styling%}
     <link rel="stylesheet" href='{% static "css/postlist_style.css"%}'>
 {% endblock %}
@@ -23,17 +28,20 @@
 		</div>
 	</div>
 	<br><br>
-	<h1>Blog Reading Section</h1>
 
-	<h2>Latest Posts</h2>
+	<h1 class="readhead1">Blog Reading Section</h1>
+
+	<h2 class="readhead2">Latest Posts</h2>
 	<hr class="redline" style="margin-left:20px;"><br>
 	<div class="latest">
 		{% for r in latest_posts %}
 			<div class="card">
 				<div class="cover"><img src="{% static 'backs/'%}{{r.bg_name}}" alt='{{r.bg_name}}'></div>
 				<div class="info">
-					<div class="head"	>
-						<h3>{{r.title}}</h3>
+					<div class="head">
+						<a href="{% url 'reading' r.id %}">
+							<h3>{{r.title}}</h3>
+						</a>
 					</div><br>
 					Author: {{r.author}}<br>
 					Genre: {{r.genre}}<br>
@@ -44,7 +52,8 @@
 	</div>
 
 	<!-- Editor's choice -->
-	<h2>Editor's Choice</h2>
+	{%block editor%}
+	<h2 class="readhead2">Editor's Choice</h2>
 	<hr class="redline" style="margin-left:20px;"><br>
 	<div class="latest">
 		{% for r in editors %}
@@ -52,7 +61,9 @@
 				<div class="cover"><img src="{% static 'backs/'%}{{r.bg_name}}" alt='{{r.bg_name}}'></div>
 				<div class="info">
 					<div class="head"	>
+						<a href="{% url 'reading' r.id %}"	
 						<h3>{{r.title}}</h3>
+						</a>
 					</div><br>
 					Author: {{r.author}}<br>
 					Genre: {{r.genre}}<br>
@@ -61,5 +72,6 @@
 			</div>
 		{% endfor %}
 	</div>
+	{%endblock%}
 	<br><br><br><br><br><br>
 {% endblock %}

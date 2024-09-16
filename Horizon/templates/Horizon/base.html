@@ -7,7 +7,8 @@
     <link rel= 'stylesheet' href="{% static 'css/style_base.css' %}">
     <link rel="icon" type="image/x-icon" href="{% static 'assets/favicon.png' %}">
     <meta name="viewport" content="width=device-width, initial-scale = 1.0">
-    <title>Horizon</title>    
+    
+    {% block title%}{%endblock%}
     {% block styling %}{% endblock %}
 </head>
 <body>
@@ -18,10 +19,10 @@
         <nav>
           <label class="logo"> Horizon. </label>
             <ul>
-                <li><a  href="./">Home</a></li>
-                <li><a  href="catalogue.html">Blog</a></li>
-                <li><a  href="contact.html">Projects</a></li>
-                <li><a  href="app.html">About</a></li>
+                <li><a  href="{% url 'home' %}">Home</a></li>
+                <li><a  href="{% url 'postlist' %}">Blog</a></li>
+                <li><a  href="{% url 'projects' %}">Projects</a></li>
+                <li><a  href="{% url 'about' %}">About</a></li>
             </ul>
         </nav>        
     </header>

@@ -1,6 +1,10 @@
 {% extends 'Horizon/base.html' %}
 {% load static %}
 
+{% block title %}
+	<title> {{read.title}} </title>
+{% endblock %}
+
 {% block styling %}
 	<link rel="stylesheet" type="text/css" href='{% static "css/read_style.css"%}'>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
