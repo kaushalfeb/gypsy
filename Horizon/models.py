@@ -1,7 +1,6 @@
 from django.db import models
 from django.utils import timezone
 from django.conf import settings
-from tinymce.models import HTMLField
 
 
 class Posts(models.Model):
@@ -12,7 +11,7 @@ class Posts(models.Model):
 	bg_name = models.CharField(max_length=100,default="grass.jpg")
 	published = models.DateTimeField(default = timezone.now)
 	likes = models.IntegerField(default=0)
-	article = HTMLField()
+	article = models.TextField()
 	
 	def publish(self):	
 		self.published = timezone.now()

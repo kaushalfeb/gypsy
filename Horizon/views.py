@@ -16,7 +16,7 @@ def postlist(request):
 
 def home(request):
 	posts = Posts.objects.all()
-	projects = Projects.objects.all()
+	projects = Projects.objects.all()[:3]
 	
 	first_three_rows = Posts.objects.all()[:3]
 	testimonials = Testimonials.objects.all()
