@@ -14,10 +14,10 @@
     <div class="container">
         {% for pro in proj %}
         <div class="card">
-            <img src="{% static 'projects/'%}{{pro.bg_name}}" alt="{{pro.title}}">
-            <h2>{{pro.title}}</h2>
-            <h3>{{pro.about}}</h3>
-            <h3>{{pro.type_proj}}</h3>
+            <img src="{% static 'projects/'%}{{pro.bg_name}}" alt="{{pro.title}}" class="thumb">
+            <h2 class="title">{{pro.title}}</h2>
+            <h3 class="type">{{pro.type_proj}}</h3>
+            <h3 class="about">{{pro.about}}</h3>
         </div>
         {% endfor %}
     </div>

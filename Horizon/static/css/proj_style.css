@@ -5,28 +5,47 @@
     width: 100%;
     font-size: 40px;
     text-transform: uppercase;
-    margin-top: 10px;
+    margin-top: 25px;
+    margin-bottom: 50px;
 }
 .container{
-    background: pink;
-    width: 90%;
+    font-family: 'Poppins','Inter';
     display: grid;
+    grid-template-columns: auto auto;
+    width: 90%;
     margin: auto;
-    grid-template-columns: 1fr 1fr; 
+    row-gap: 10px;
+    column-gap: 10px;
+    
 }
 .card{
-    background-color: lightgreen;
+    display: flex;
+    flex-direction: column;
+    height: 700px;
 }
-.card img{
+.thumb{
+    width: 100%;
+    height: 70%;
+    object-fit: contain;
+    justify-content: center;
+    background-image: radial-gradient(white,lightblue);
+    border-radius: 20px;
+}
+.thumb img{
     width: 100%;
     height: 100%;
 }
-.card h2{
-    font-family: 'Poppins';
-    font-size: 20;
+.title{
+    text-align: center;
 }
-.card h3{
-    font-size: 14px;
-    font-weight: 100;
-    font-style: normal;
+.title h2{
+    font-size: 50px;
+}
+.about{
+    font-size: 14;
+    font-weight: 400;
+}
+.type{
+    font-size: 15px;
+    
 }

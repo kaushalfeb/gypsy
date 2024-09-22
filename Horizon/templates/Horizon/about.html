@@ -7,8 +7,36 @@
 
 {% block styling %}
     <link rel="stylesheet" type="text/css" href='{% static "css/abt_style.css"%}'>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
 {% endblock %}
 
 {% block content %}
-    <h1>AboutUs</h1>
+    <h1 class="top-head">About Me</h1>
+    <div class="Main">
+        <div class="LHS">
+            <img src="{% static 'users/bruce_.jpg'%}" alt="Profile Picture">
+        </div>
+        <div class="RHS">
+            <h1>Kaushal Singh</h1>
+            <h2>Programmer</h2>
+            <hr class="ruled">
+            <p>
+                I write about Math, Movies, Economics and life. My hobbies include Journalling, Sketching, designing, reading, playing chess and watching Formula One. I have done graduation in Bachelors of Computer Application. I program in HTML, CSS, C,C++, Java, Python, Django, Pandas, Numpy, Matplotlib and Mysql. Some designing projects are available on my dribbble and Github. 
+            </p>
+            <div class="social">
+                <a href="www.X.com">
+                    <img src="{% static 'assets/X_.svg'%}" alt="X" width="30" height="30">
+                </a>
+                <a href="www.facebook.com">
+                    <img src="{% static 'assets/facebook.svg'%}" alt="Facebook">
+                </a>
+                <a href="www.instagram.com/kaushalfeb">
+                    <img src="{% static 'assets/instagram.svg'%}" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </div>
 {% endblock %}

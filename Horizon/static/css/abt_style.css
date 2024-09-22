@@ -1,0 +1,59 @@
+.top-head{
+    font-family: 'Poppins';
+    align-content: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 25px;
+}
+.Main{
+    width: 90%;
+    display: flex;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.LHS{
+    flex: 1;
+    text-align: center;
+    align-content: center;
+}
+.LHS img{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+}
+.RHS{
+    flex: 1;
+}
+.RHS h1{
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+.RHS h2{
+    font-family: 'Playfair Display';
+    font-size: 30px;
+    color: #515151;
+}
+.RHS p{
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 14;
+    justify-content: space-around;
+    text-align: justify;
+    margin-right: 10%;
+}
+.ruled{
+    width: 25%;
+    height: 4px;
+    background-color: rgb(67, 67, 241);
+    border: none;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+.social{
+    margin-top: 10%;
+    text-align: right;
+    margin-right: 10%;
+}
